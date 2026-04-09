@@ -68,20 +68,7 @@
         <section id="featured-projects">
             <h2>FEATURED PROJECTS</h2>
             <article id="project-container">
-                <div class="project-box">
-                    <figure>
-                        <img src="" alt="Project image">
-                    </figure>
-                    <div class="project-box-line"></div>
-                    <p>Description:</p>
-                    <div class="project-box-line"></div>
-                    <p>Tach Stack:</p>
-                    <div class="project-box-line"></div>
-                    <figure>
-                        <img src="" alt="Github repo icon">
-                    </figure>
-                    <a href="">LIVE VIEW</a>
-                </div>
+                <!-- Render from projects.json -->
             </article>
         </section>
         
@@ -89,12 +76,46 @@
         
         <section id="education">
             <h2>EDUCATION</h2>
+            <article class="education-container">
+                <div>
+                    <h3>BSc in Computer Science</h3>
+                    <p>University of London (In Progress)</p>
+                </div>
+                
+                <div>
+                    <h3>CERTIFICATIONS</h3>
+                    <ul>
+                        <li><a href="">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </article>
         </section>
         
         <div class="line"></div>
         
         <section id="contact">
             <h2>CONTACT</h2>
+            <form name="contact" netlify method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact">
+
+                <label for="first-name"></label><br>
+                <input type="text" id="first-name" name="first-name" placeholder="Name" required><br>
+
+                <label for="email"></label><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+
+                <label for="message"></label><br>
+                <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea><br><br>
+
+                <button type="submit">Send Your Message</button>
+            </form>
+            
         </section>
     </main>
 
