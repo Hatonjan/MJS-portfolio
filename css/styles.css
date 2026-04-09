@@ -29,5 +29,132 @@
 
 /* Variables colors */
 :root {
-    --background: #1E1E1E;
+    --background: #0A0A0A;
+    --text-color: #E6E6E6;
+    --subtitle-color: #828282;
+    --box-line-color: #373636;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+    font-family: 'Montserrat';
+}
+
+section {
+    margin: 5rem 10vw;
+}
+
+h2 {
+    font-size: 2.75rem;
+}
+
+.line   {
+    background: var(--box-line-color);
+    width: 100vw;
+    height: 1px;
+}
+
+/* Header section */
+header {
+    margin: 1rem 4rem;
+    display: flex;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 4rem;
+}
+
+.navigation {
+    margin: 1rem;
+    display: flex;
+    font-size: 1.25rem;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    gap: 3vw;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 1rem;
+}
+/* End of header section */
+
+/* Hero section */
+#hero h1 {
+    font-family: 'Montserrat Underline';
+    font-weight: bold;
+    font-size: 5.5rem;
+    margin-top: 10rem ;
+}
+
+#hero h3 {
+    font-size: 2.125rem;
+    font-weight: 400;
+    color: var(--subtitle-color);
+    margin-bottom: 10rem;
+}
+
+.cta {
+    
+}
+
+.cta a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.375rem;
+    border: 1px solid var(--box-line-color);
+    padding: .5rem 2rem;
+    margin-right: 5rem;
+}
+
+.arrow-down {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--box-line-color);
+    margin-top: 4rem;
+}
+/* End of Hero */
+
+/* About section */
+.about-box {
+    border: 1px solid var(--box-line-color);
+    padding: 4rem 5rem;
+    display: flex;
+    margin: 5rem 0;
+}
+
+.about-description {
+    font-size: 1.875rem;
+    color: var(--subtitle-color);
+    width: 50%;
+    line-height: 150%;
+}
+
+.about-img {
+    width: 450px;
+    margin-left: 5rem;
+}
+/* End of about */
+
+/* Projects Section */
+#project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.project-box {
+    border: 1px solid var(--box-line-color)
+}
+/* End of Projects */

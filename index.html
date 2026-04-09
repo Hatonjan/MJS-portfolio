@@ -9,16 +9,32 @@
 </head>
 <body>
     <header>
-        <figure>
-            <img src="" alt="Personal logo (The letter MJS ordered inside an hexagon)">
-        </figure>
-        <nav>
+        <a href="/">
+            <figure>
+                <img
+                    class="logo"
+                    src="./assets/svg/mjs.svg" 
+                    alt="Personal logo (The letter MJS ordered inside an hexagon)"
+                >
+            </figure>
+        </a>
+        <nav class="navigation">
             <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>PROJECTS</li>
-                <li>EDUCATION</li>
-                <li>CONTACT</li>
+                <li>
+                    <a href="/">HOME</a>
+                </li>
+                <li>
+                    <a href="#about">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#projects">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="#education">EDUCATION</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACT</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -28,22 +44,55 @@
             <h1>JONATHAN SCOTT</h1>
             <h3>STRUCTURED SOFTWARE. SCALABLE SYSTEMS</h3>
 
-            <a href="/projects">PROJECTS</a>
-            <a href="/resume">RESUME</a>
+            <div class="cta">
+                <a href="/projects">PROJECTS</a>
+                <a href="/resume">RESUME</a>
+            </div>
+            <p class="arrow-down">↓</p>
         </section>
 
+        <div class="line"></div>
+        
         <section id="about">
             <h2>ABOUT ME</h2>
+            <article class="about-box">
+                <p class="about-description">I am a Web Developer based in San Diego, CA, currently pursuing a B.S. in Computer Science from the University of London. By translating years of operational leadership into digital engineering, I apply a process-driven approach to build scalable, highly efficient software architecture.</p>
+                <figure >
+                    <img class="about-img" src="./assets/img/mjs-photo.png" alt="A Jonathan Photo">
+                </figure>
+            </article>
         </section>
-
+        
+        <div class="line"></div>
+        
         <section id="featured-projects">
             <h2>FEATURED PROJECTS</h2>
+            <article id="project-container">
+                <div class="project-box">
+                    <figure>
+                        <img src="" alt="Project image">
+                    </figure>
+                    <div class="project-box-line"></div>
+                    <p>Description:</p>
+                    <div class="project-box-line"></div>
+                    <p>Tach Stack:</p>
+                    <div class="project-box-line"></div>
+                    <figure>
+                        <img src="" alt="Github repo icon">
+                    </figure>
+                    <a href="">LIVE VIEW</a>
+                </div>
+            </article>
         </section>
+        
+        <div class="line"></div>
         
         <section id="education">
             <h2>EDUCATION</h2>
         </section>
-
+        
+        <div class="line"></div>
+        
         <section id="contact">
             <h2>CONTACT</h2>
         </section>
@@ -64,7 +113,7 @@
                 <li>EDUCATION</li>
                 <li>CONTACT</li>
             </ul>
-            <p>&copy; 2026 Jonathan Scott. All rights reserved</p>
+            <p>&copy; <span id="year"></span> Jonathan Scott. All rights reserved</p>
             </div>
             
             <div>
@@ -83,6 +132,6 @@
 
     </footer>
     
-    
+    <script src="./js/index.js"></script>
 </body>
 </html>
