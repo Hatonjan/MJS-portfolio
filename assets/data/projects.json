@@ -10,6 +10,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/thrust-insights",
         "liveUrl": "https://thrust-insights.netlify.app/", 
+        "responsive": true,
         "featured": true
         },
         {
@@ -22,6 +23,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/chronicles-of-the-web",
         "liveUrl": "https://chronicles-of-the-web.netlify.app/",
+        "responsive": true,
         "featured": false
         },
         {
@@ -34,6 +36,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "",
         "liveUrl": "https://mjscott.dev",
+        "responsive": true,
         "featured": true
         },
         {
@@ -46,6 +49,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/thenightfalladventure",
         "liveUrl": "https://thenightfalladventure.mjscott.dev/",
+        "responsive": false,
         "featured": true
         },
         {
@@ -58,6 +62,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/momenti-unici",
         "liveUrl": "https://momenti-unici.netlify.app/",
+        "responsive": true,
         "featured": false
         },
         {
@@ -70,6 +75,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/auto-body-shop",
         "liveUrl": "https://back-to-life-auto-body.netlify.app/",
+        "responsive": true,
         "featured": false
         },
         {
@@ -82,6 +88,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/space-exploration",
         "liveUrl": "https://space-exploration-equipment.netlify.app/",
+        "responsive": true,
         "featured": true
         },
         {
@@ -94,6 +101,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/data-vis-app",
         "liveUrl": "https://data-vis-app.netlify.app/",
+        "responsive": true,
         "featured": false
         },
         {
@@ -106,6 +114,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/barber-shop",
         "liveUrl": "https://shaving-soap.netlify.app/",
+        "responsive": true,
         "featured": false
         },
         {
@@ -118,6 +127,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/animals-info",
         "liveUrl": "https://animal-explorer.netlify.app/",
+        "responsive": true,
         "featured": false
         }
     ]

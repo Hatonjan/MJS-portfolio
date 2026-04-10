@@ -180,6 +180,7 @@ header {
 /* End of Hero */
 
 /* About section */
+
 .about-box {
     border: var(--border-box);
     padding: 4rem 5rem;
@@ -240,13 +241,24 @@ header {
     width: 80px;
 }
 
-.cta-row a, .private-repo {
+.cta-row a, 
+.unavailable-url {
     text-decoration: none;
     color: var(--text-color);
     border: var(--border-box);
     padding: .5rem 1.5rem;
     border-radius: 2px;
     font-weight: bold;
+}
+
+.desktop-only {
+    display: inline-block; 
+}
+
+/* Hide the disabled warning */
+.keyboard-warning {
+    display: none; 
+
 }
 /* End of Projects */
 
@@ -415,6 +427,18 @@ header {
     .project-box p {
         font-size: 1rem;
     }
+
+    .desktop-only {
+        display: none; 
+    }
+
+    .keyboard-warning {
+        display: inline-block;
+        padding: 0.5rem 1rem; 
+        font-size: 0.9rem;
+        color: var(--box-line-color); 
+        border: var(--border-box); 
+    }
     /* End of Projects */
 
     /* Education Section */
@@ -521,6 +545,10 @@ header {
     .project-box p {
         font-size: 1rem;
     }
+
+    .keyboard-warning {
+        font-size: 0.75rem !important; 
+    }
     /* End of Projects */
 
     /* Education Section */
@@ -621,7 +649,12 @@ header {
         font-size: 1rem;
     }
 
-    .private-repo {
+    .project-box-line {
+        margin: 1rem -.5rem;
+}   
+
+
+    .unavailable-url {
         font-size: .75rem !important;
     }
     /* End of Projects */

@@ -38,9 +38,15 @@ async function loadFeaturedProjects() {
                             </figure>
                         </a>
                     ` : `
-                        <p class="private-repo">PRIVATE REPO</p>
-                    `}                    
-                <a href="${project.liveUrl}" target="_blank">LIVE VIEW</a>
+                        <p class="unavailable-url">PRIVATE REPO</p>
+                    `}       
+                    
+                    ${project.responsive ? `
+                        <a href="${project.liveUrl}" target="_blank" class="btn-live">LIVE VIEW</a>
+                    ` : ` 
+                        <a href="${project.liveUrl}" target="_blank" class="btn-live desktop-only">LIVE VIEW</a>
+                        <p class="keyboard-warning">KEYBOARD REQUIRED</p>
+                    `}
                 </div>
             </div>
         `).join('');
