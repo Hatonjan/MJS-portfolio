@@ -9,7 +9,7 @@
         "altText": "A screenshot of the thrust insight website",
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/thrust-insights",
-        "liveUrl": "https://thrust-insights.netlify.app/",
+        "liveUrl": "https://thrust-insights.netlify.app/", 
         "featured": true
         },
         {

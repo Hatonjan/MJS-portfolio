@@ -140,8 +140,9 @@ header {
 }
 
 .about-img {
-    width: 450px;
-    margin-left: 5rem;
+    width: 400px;
+    margin-left: 6rem;
+    /* align-items: center; */
 }
 /* End of about */
 
@@ -199,4 +200,122 @@ header {
 .education-container {
     border: var(--border-box);
 }
+
+#education h3 {
+    font-size: 2rem;
+    margin: 5rem 5rem 0;
+}
+
+#education h4 {
+    font-size: 1.5rem;
+    margin-left: 5rem;
+    color: var(--subtitle-color);
+}
+
+#certs-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 5rem 5rem;
+}
+
+#certs-list a {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    border: var(--border-box);;
+    text-decoration: none;
+    color:var(--text-color);
+    padding: 1rem; 
+}
+
+#certs-list img {
+    height: 1.5rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+#certs-list p {
+    padding-bottom: 3px;
+}
 /* End of eduction */
+
+/* Contact section */
+.contact-box {
+    border: var(--border-box);
+    width: 30vw;
+}
+
+.contact-line{
+    background-color: var(--box-line-color);
+    height: 1px;
+}
+
+#contact input, textarea {
+    background: transparent;
+    border: none;
+    color: var(--subtitle-color);
+    margin: 0;
+    padding: .75rem 1rem;
+    font-size: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#contact textarea {
+    font-family: 'Montserrat';
+    resize: none;
+}
+
+#contact button {
+    margin-top: 2rem;
+    background: transparent;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    border: var(--border-box);
+    font-size: 1rem;
+}
+/* End opf contact*/
+
+/* Footer section */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 5rem;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-navigation {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-navigation a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+.footer-links {
+    list-style-type: none;
+    display: flex;
+    margin-left:5rem;
+    gap: 3rem;
+}
+
+.footer-links img {
+    height: 50px;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--subtitle-color);
+
+}
+/* end of footer */

@@ -1,0 +1,44 @@
+{
+    "certs": [
+        {
+        "id": 0,
+        "authority": "GOOGLE",
+        "platform": "Coursera",
+        "title": "PROJECT MANAGER",
+        "icon": "./assets/svg/google.svg",
+        "altText": "Google 'G' icon",
+        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/TVE2B8W7KU9C",
+        "recognizedForCredit": false
+        },
+        {
+        "id": 1,
+        "authority": "IMB",
+        "platform": "Coursera",
+        "title": "DATA SCIENCE",
+        "icon": "./assets/svg/ibm.svg",
+        "altText": "IBM icon",
+        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/3MIIYA2LF70Q",
+        "recognizedForCredit": true
+        },
+        {
+        "id": 2,
+        "authority": "GOOGLE",
+        "platform": "Coursera",
+        "title": "IT SUPPORT",
+        "icon": "./assets/svg/google.svg",
+        "altText": "Google 'G' icon",
+        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/J64B8R9RXGUX",
+        "recognizedForCredit": true
+        },
+        {
+        "id": 3,
+        "authority": "META",
+        "platform": "Coursera",
+        "title": "FULL-STACK DEVELOPER",
+        "icon": "./assets/svg/meta.svg",
+        "altText": "Meta 'M' icon",
+        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/EJFKRO8Y293G",
+        "recognizedForCredit": false
+        }
+    ]
+}

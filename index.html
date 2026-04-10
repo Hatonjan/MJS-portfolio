@@ -10,31 +10,19 @@
 <body>
     <header>
         <a href="/">
-            <figure>
-                <img
-                    class="logo"
-                    src="./assets/svg/mjs.svg" 
-                    alt="Personal logo (The letter MJS ordered inside an hexagon)"
-                >
-            </figure>
+            <img
+                class="logo"
+                src="./assets/svg/mjs.svg" 
+                alt="Personal logo (The letter MJS ordered inside an hexagon)"
+            >
         </a>
         <nav class="navigation">
             <ul>
-                <li>
-                    <a href="/">HOME</a>
-                </li>
-                <li>
-                    <a href="#about">ABOUT</a>
-                </li>
-                <li>
-                    <a href="#projects">PROJECTS</a>
-                </li>
-                <li>
-                    <a href="#education">EDUCATION</a>
-                </li>
-                <li>
-                    <a href="#contact">CONTACT</a>
-                </li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -76,25 +64,19 @@
         
         <section id="education">
             <h2>EDUCATION</h2>
-            <article class="education-container">
+            <div class="education-container">
                 <div>
                     <h3>BSc in Computer Science</h3>
-                    <p>University of London (In Progress)</p>
+                    <h4>University of London (In Progress)</h4>
                 </div>
                 
-                <div>
+                <div id="certs-container">
                     <h3>CERTIFICATIONS</h3>
-                    <ul>
-                        <li><a href="">
-                                <figure>
-                                    <img src="" alt="">
-                                </figure>
-                            </a>
-                        </li>
+                    <ul id="certs-list">
+                        <!-- Render from certs.json -->
                     </ul>
                 </div>
-
-            </article>
+            </div>
         </section>
         
         <div class="line"></div>
@@ -102,55 +84,50 @@
         <section id="contact">
             <h2>CONTACT</h2>
             <form name="contact" netlify method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact">
+                <div class="contact-box">
+                    <input type="hidden" name="form-name" value="contact">
+                    <label for="first-name"></label><br>
+                    <input type="text" id="first-name" name="first-name" placeholder="NAME" required><br>
+                    
+                    <div class="contact-line"></div>
+                    
+                    <label for="email"></label><br>
+                    <input type="email" id="email" name="email" placeholder="EMAIL" required><br>
 
-                <label for="first-name"></label><br>
-                <input type="text" id="first-name" name="first-name" placeholder="Name" required><br>
+                    <div class="contact-line"></div>
 
-                <label for="email"></label><br>
-                <input type="email" id="email" name="email" placeholder="Email" required><br>
-
-                <label for="message"></label><br>
-                <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea><br><br>
-
-                <button type="submit">Send Your Message</button>
+                    <label for="message"></label><br>
+                    <textarea id="message" name="message" placeholder="MESSAGE" rows="5" required></textarea><br><br>
+                </div>
+                <button type="submit">SEND MESSAGE</button>
             </form>
-            
         </section>
     </main>
 
+    <div class="line"></div>
+
     <footer>
-            <div>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <h4>JONATHAN SCOTT</h4>
-            </div>
-            <div>
-                <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>PROJECTS</li>
-                <li>EDUCATION</li>
-                <li>CONTACT</li>
-            </ul>
-            <p>&copy; <span id="year"></span> Jonathan Scott. All rights reserved</p>
-            </div>
-            
-            <div>
-                <ul>
-                    <li>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <a href=""></a>
-                    </li>
-                    <li>
-                        <a href=""></a>
-                    </li>
-                </ul>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./assets/svg/footer-logo.svg" alt="Personal logo (The letter MJS ordered inside an hexagon)">
             </div>
 
+            <ul class="footer-navigation">
+                <li><a href="/">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        
+            <ul class="footer-links">
+                <li><a href=""><img src="./assets/svg/github-line.svg" alt="Github logo"></a></li>
+                <li><a href=""><img src="./assets/svg/linkedin-line.svg" alt="LinkedIn logo"></a></li>
+                <li><a href=""><img src="./assets/svg/gmail-line.svg" alt="Gmail logo"></a></li>
+            </ul>
+        </div>
+
+        <p class="copyright">&copy; <span id="year"></span> Jonathan Scott. All rights reserved</p>
     </footer>
     
     <script src="./js/index.js"></script>

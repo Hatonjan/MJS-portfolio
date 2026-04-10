@@ -2,7 +2,7 @@
 document.getElementById("year").textContent = new Date().getFullYear(); 
 
 /* Render the feature projects section */
-async function featuredProjects() {
+async function loadFeaturedProjects() {
     try {
         // Fetch the JSON file
         const response = await fetch('./assets/data/projects.json');
@@ -49,11 +49,39 @@ async function featuredProjects() {
         document.getElementById('project-container').innerHTML = html;
     
     // Error handling
-    } catch (error) {
+    } catch(error) {
         console.error('Error loading projects: ', error);
     }
 }
 
 // Call the function when page loads
-document.addEventListener('DOMContentLoaded', featuredProjects);
+document.addEventListener('DOMContentLoaded', loadFeaturedProjects);
 /* End of featured projects*/
+
+/* Render the certs list in the education section */
+async function loadCertifications() {
+    try {
+        // Fetch the certs.json
+        const response = await fetch('./assets/data/certs.json');
+        const data = await response.json();
+
+        const html = data.certs.map(cert => `
+            <li>
+                <a href="${cert.url}">
+                    <img src="${cert.icon}" alt="${cert.altText}">
+                    <p>${cert.authority}</p>
+                    <p>${cert.title}</p>
+                </a>
+            </li>    
+        `).join('')
+
+        // Update DOM
+        document.getElementById('certs-list').innerHTML = html;
+    } catch(error) {
+        console.error('Error loading Certifications: ', error);
+    }
+}
+
+// Call the function when page loads
+document.addEventListener('DOMContentLoaded', loadCertifications)
+/* end of  the certs list  */
