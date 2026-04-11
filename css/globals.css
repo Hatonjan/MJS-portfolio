@@ -52,3 +52,17 @@ h2 {
     font-size: 2.75rem;
     margin-bottom: 5rem;
 }
+
+/* Responsive design */
+@media(max-width: 768px){
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 768px){
+    h2 {
+        font-size: 1.875rem;
+        margin-bottom: 3rem;
+    }
+}
