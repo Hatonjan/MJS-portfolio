@@ -122,6 +122,12 @@
     text-decoration: none;
     color:var(--text-color);
 }
+
+.cert-grid img {
+    height: 1.5rem;
+    max-width: fit-content;
+    margin-bottom: .5rem;
+}
 /** end of resume**/
 
 /* Responsive design */
