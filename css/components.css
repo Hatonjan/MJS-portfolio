@@ -25,7 +25,15 @@ header {
 .navigation a {
     text-decoration: none;
     color: var(--text-color);
-    margin: 1rem;
+    margin: .5rem;
+    padding: .5rem 1rem;
+    border: var(--border-box);
+    border: 1px solid transparent;
+}
+
+.navigation a:hover {
+    box-shadow: none;
+    border: var(--border-box);
 }
 /* End of navigation */
 
@@ -81,18 +89,6 @@ header {
     width: 100%;
     font-size: 1.125rem;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .navigation {
-        display: none;
-    }
-}
-/* End of hamburger */
 /** End of header **/
 
 /* Footer section */
@@ -117,6 +113,10 @@ header {
     color: var(--text-color)
 }
 
+.footer-navigation a:hover {
+    box-shadow: none;
+}
+
 .footer-links {
     list-style-type: none;
     display: flex;
@@ -138,79 +138,10 @@ header {
 
 /* Responsive design */
 @media (max-width: 1024px) {
-    /* Hero section */
-    #hero h1 {
-        font-size: 5rem;
+    /* Navigation */
+    .navigation ul {
+        gap: 2vw;
     }
-
-    #hero h2 {
-        font-size: 2rem;
-        font-weight: 400;
-    }
-    /* End of Hero */
-
-    /* About section */
-    .about-box {
-        border: var(--border-box);
-        padding: 2rem 2.5rem;
-        display: flex;
-        margin: 5rem 0;
-    }
-
-    .about-description {
-        font-size: 1.375rem;
-        width: 60%;
-    }
-
-    .about-img {
-        width: 275px;
-        margin-left: 1.5rem;
-    }
-    /* End of about */
-
-    /* Projects Section */
-    #project-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project-box p {
-        font-size: 1rem;
-    }
-
-    .desktop-only {
-        display: none; 
-    }
-
-    .keyboard-warning {
-        display: inline-block;
-        padding: 0.5rem 1rem; 
-        font-size: 0.9rem;
-        color: var(--box-line-color); 
-        border: var(--border-box); 
-    }
-    /* End of Projects */
-
-    /* Education Section */
-    #education h3 {
-        font-size: 2.125rem;
-    }
-
-    #certs-list {
-        grid-template-columns: 1fr 1fr ;
-    }
-    /* End of eduction */
-
-    /* Contact section */
-    .contact-box {
-        width: 40vw;
-    }
-
-    .contact-line{
-        background-color: var(--box-line-color);
-        height: 1px;
-    }
-    /* End opf contact*/
 
     /* Footer section */
     .footer-container {
@@ -251,6 +182,14 @@ header {
     /* Header section */
     .logo {
         width: 40px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
     }
 
     /* Footer section */

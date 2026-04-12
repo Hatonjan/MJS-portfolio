@@ -122,6 +122,16 @@
     display: none; 
 
 }
+
+.projects-cta {
+    text-decoration: none;
+    color: var(--text-color);
+    border: var(--border-box);
+    padding: 1rem 2rem;
+    display: block;
+    margin-top: 5rem;
+    width: fit-content;
+}
 /* End of Projects */
 
 /* Education Section */
@@ -206,6 +216,10 @@
     border: var(--border-box);
     font-size: 1rem;
 }
+
+#contact button:hover {
+    box-shadow: 2px 2px 4px var(--box-line-color);
+}
 /* End opf contact*/
 
 /* Responsive design */
@@ -283,40 +297,6 @@
         height: 1px;
     }
     /* End opf contact*/
-
-    /* Footer section */
-    .footer-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 5rem;
-    }
-
-    .footer-logo img {
-        height: 33px;
-    }
-
-    .footer-navigation {
-        gap: .75rem;
-        margin-left: 3rem;
-    }
-
-    .footer-navigation a {
-        font-size: .75rem;
-    }
-
-    .footer-links {
-        margin-left:3.5rem;
-        gap: 2rem;
-    }
-
-    .footer-links img {
-        height: 40px;
-    }
-
-    .copyright {
-        font-size: .875rem;
-    }
-    
 }
 
 @media (max-width: 768px) {
@@ -411,20 +391,22 @@
     .project-box {
         padding: .5rem;
     }
+    
     .cta-row {
         gap: 1rem;
     }
+
     .project-box a {
         font-size: .875rem;
     }
+
     .project-box p {
         font-size: 1rem;
     }
 
     .project-box-line {
         margin: 1rem -.5rem;
-}   
-
+    }   
 
     .unavailable-url {
         font-size: .75rem !important;
@@ -460,22 +442,5 @@
         width: 80vw;
     }
     /* End opf contact*/
-
-    /* Footer section */
-    .footer-logo {
-        margin-top: 2rem;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        margin:5vw;
-    }
-
-    .copyright {
-        text-align: left;
-        margin-left: 5vw;
-        font-size: 1rem;
-    }
 }
 /* End of responsive */
