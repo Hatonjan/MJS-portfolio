@@ -5,11 +5,12 @@
 
 #project-container h2 {
     text-transform:uppercase;
+    margin: 1rem 0;
 }
 
 /* Drop-down menu container */
 .dropdown-container {
-    margin-bottom: 4rem; 
+    margin-bottom: 3rem; 
     display: flex;
     gap: 2rem;
     align-items:first baseline;
@@ -33,13 +34,14 @@
 /* The visible trigger button */
 .dropdown-selected {
     border: var(--border-box);
-    padding: 1rem 2rem;
+    padding: .5rem 1rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
     color: var(--subtitle-color);
+    background-color: black;
 }
 
 /* The hidden list container */
@@ -48,14 +50,13 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--background);
     border: var(--border-box);
     border-top: none; 
     list-style: none;
     padding: 0;
     margin: 0;
     display: none; 
-    max-height: 60vh;
+    max-height: 50vh;
     overflow-y: auto;
     z-index: 50;
 }
@@ -85,9 +86,9 @@
 
 /* The individual options */
 .dropdown-option {
-    padding: 1rem 2rem;
+    padding: .5rem 1rem;
     cursor: pointer;
-    background-color: var(--background);
+    background-color: black;
     color: var(--subtitle-color);
     border-bottom: 1px solid var(--box-line-color);
 }
@@ -103,9 +104,6 @@
     color: var(--text-color);
 }
 
-.dropdown-arrow {
-    font-size: 1.5rem;
-}
 /* End of drop-down */
 
 /* Project box */
@@ -236,6 +234,10 @@
     .dropdown {
         width: 60vw; 
     }
+
+    .dropdown-options {
+        max-height: 40vh;
+    }
     /* End of drop-down */
 
     /* Projects container */
@@ -262,7 +264,7 @@
     }
 
     .dropdown {
-        width: 85vw; 
+        width: 70vw; 
         font-size: .9rem;
     }
     /* End of drop-down */

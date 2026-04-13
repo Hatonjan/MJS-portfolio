@@ -1,26 +1,28 @@
-/** Header section **/
-header {
-    padding: .5rem 4rem;
+/* Header section */
+.navbar {
     display: flex;
+    align-items: center; 
     background-color: var(--background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    padding: 0.75rem 4rem; 
+    box-sizing: border-box; /* Forces the padding inside the width */
+    z-index: 1024;
 }
 
 .logo {
-    width: 50px;
-    margin-right: 4rem;
+    width: 40px;
 }
 
 /* Navigation section */
 .navigation {
-    margin: 1rem;
+    background-color: var(--background);
     display: flex;
     font-size: 1.25rem;
-    position: fixed;
-    padding: .5rem 4rem;
-    top: 0;
-    width: 100%;
-    z-index: 1024;
-    height:65px;
+    padding: 1rem 3vw ;
+    margin-left: 5rem;
 }
 
 .navigation ul {
@@ -68,15 +70,14 @@ header {
 }
 
 .navigation.mobile-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
+    display: flex;
+    position: absolute; 
+    top: 100%; 
     left: 0;
     width: 100%;
     flex-direction: column;
     background: var(--background);
-    border-bottom: var(--border-box);
-    z-index: 1000;
+    border-bottom: 1px solid var(--box-line-color);
 }
 
 .navigation.mobile-menu ul {
@@ -96,7 +97,7 @@ header {
     width: 100%;
     font-size: 1.125rem;
 }
-/** End of header **/
+/* End of header */
 
 /* Footer section */
 .footer-container {
@@ -146,6 +147,11 @@ header {
 /* Responsive design */
 @media (max-width: 1024px) {
     /* Navigation */
+    .navigation {
+        padding: 1rem 2vw;
+        margin-left: 0rem;
+    }
+
     .navigation ul {
         gap: 2vw;
     }
@@ -187,6 +193,10 @@ header {
 
 @media (max-width: 768px) {
     /* Header section */
+    .navbar {
+        padding: 0.75rem 1.5rem; 
+    }
+
     .logo {
         width: 40px;
     }
@@ -197,6 +207,10 @@ header {
 
     .navigation {
         display: none;
+    }
+
+    .navigation.mobile-menu {
+        display: flex;
     }
 
     /* Footer section */

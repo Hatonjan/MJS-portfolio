@@ -14,19 +14,18 @@
 
 /* Hero section */
 #hero {
-    padding-top: 40px;
+    padding-top: 80px;
     position: sticky;
-    top: 40px; 
-    height: calc(100vh - 40px);
+    top: 0px; 
+    height: fit-content;
     overflow-y: auto; 
-    /* z-index: -1; */
 }
 
 #hero h1 {
     font-family: 'Montserrat Underline';
     font-weight: bold;
     font-size: 5.5rem;
-    margin-top: 10rem ;
+    margin-top: 7rem ;
     padding-left: 2px;
 }
 

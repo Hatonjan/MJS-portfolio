@@ -101,7 +101,7 @@ function attachDropdownListeners() {
 }
 
 function renderProject(index) {
-    const project = allProjects[index];
+    const project = allProjects[index]; 
     const projectHtml = `
         <h2>${project.title}</h2>
         <div class="project-box">
