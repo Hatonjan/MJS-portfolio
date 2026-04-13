@@ -9,7 +9,7 @@
 
 /* Drop-down menu container */
 .dropdown-container {
-    margin-bottom: 4rem;
+    margin-bottom: 4rem; 
     display: flex;
     gap: 2rem;
     align-items:first baseline;
@@ -273,7 +273,7 @@
     }
 
     .thumbnail {
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
 
     .project-box p {

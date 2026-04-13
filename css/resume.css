@@ -1,4 +1,4 @@
-/** Resume page**/
+/* Resume page */
 .resume-container {
     background-color: var(--background);
     color: var(--text-color); 
@@ -19,7 +19,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    margin-left: 2rem;
+    padding: 2rem 0;
+    z-index: 1;
 }
 
 .resume-header h2 {
@@ -55,7 +57,7 @@
 
 .resume-block h3 {
     color: var(--subtitle-color);
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-top: 0;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;

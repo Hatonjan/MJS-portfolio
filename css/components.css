@@ -1,7 +1,8 @@
 /** Header section **/
 header {
-    margin: 1rem 4rem;
+    padding: .5rem 4rem;
     display: flex;
+    background-color: var(--background);
 }
 
 .logo {
@@ -14,6 +15,12 @@ header {
     margin: 1rem;
     display: flex;
     font-size: 1.25rem;
+    position: fixed;
+    padding: .5rem 4rem;
+    top: 0;
+    width: 100%;
+    z-index: 1024;
+    height:65px;
 }
 
 .navigation ul {

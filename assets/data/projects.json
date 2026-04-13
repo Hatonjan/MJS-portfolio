@@ -101,7 +101,7 @@
         "videoUrl": "./assets/mp4/",
         "repoUrl": "https://github.com/Hatonjan/data-vis-app",
         "liveUrl": "https://data-vis-app.netlify.app/",
-        "responsive": true,
+        "responsive": false,
         "featured": false
         },
         {
