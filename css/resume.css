@@ -137,7 +137,7 @@
 @media(max-width: 768px) {
     .resume-container {
         max-width: 90vw;
-        margin: 4rem auto;
+        margin: 6rem auto;
     }
 
     .resume-header {
