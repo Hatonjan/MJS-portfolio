@@ -92,3 +92,35 @@ async function loadCertifications() {
 document.addEventListener('DOMContentLoaded', loadCertifications)
 /* end of  the certs list  */
 
+/** Home toggle navigation **/
+document.addEventListener('DOMContentLoaded', () => {
+    const homeToggle = document.getElementById('home-toggle');
+    const homeSubnav = document.getElementById('home-subnav');
+
+    // 1. The Toggle Mechanism
+    homeToggle.addEventListener('click', (e) => {
+        // Stop the click from bubbling up to the document object
+        e.stopPropagation(); 
+        
+        // Toggle the visibility and the arrow rotation
+        homeSubnav.classList.toggle('show');
+        homeToggle.classList.toggle('open');
+    });
+
+    // 2. The "Outside Click" Safety Net
+    document.addEventListener('click', (e) => {
+        // If the dropdown is open AND the user clicked somewhere outside of it...
+        if (homeSubnav.classList.contains('show') && !homeSubnav.contains(e.target)) {
+            homeSubnav.classList.remove('show');
+            homeToggle.classList.remove('open');
+        }
+    });
+
+    // 3. Auto-close when a sub-link is clicked
+    homeSubnav.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            homeSubnav.classList.remove('show');
+            homeToggle.classList.remove('open');
+        }
+    });
+});

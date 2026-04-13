@@ -47,11 +47,18 @@
     z-index: 1;
 }
 
+@keyframes mechanical-tick {
+    0%, 45%   { transform: translateY(0);}
+    50%, 95%  { transform: translateY(4px);}
+    100%      { transform: translateY(0);}
+}
+
 .arrow-down {
     text-align: center;
     font-size: 3rem;
     color: var(--box-line-color);
     margin-top: 4rem;
+    animation: mechanical-tick 1.3s linear infinite;
 }
 /* End of Hero */
 

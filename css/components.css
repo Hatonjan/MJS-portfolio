@@ -25,24 +25,104 @@
     margin-left: 5rem;
 }
 
-.navigation ul {
+/* 1. THE DIRECT CHILD FIX */
+/* Only targets the main top-level UL, protecting the dropdown */
+.navigation > ul {
     list-style-type: none;
     display: flex;
     gap: 3vw;
+    align-items: center; /* Keeps the dropdown toggle perfectly centered */
 }
 
-.navigation a {
+/* Target the main top-level links */
+.navigation > ul > li > a.nav-link {
     text-decoration: none;
     color: var(--text-color);
     margin: .5rem;
     padding: .5rem 1rem;
-    border: var(--border-box);
     border: 1px solid transparent;
 }
 
-.navigation a:hover {
+.navigation > ul > li > a.nav-link:hover {
+    background-color: var(--box-line-color);
+    color: var(--text-color);
+    border-color: transparent;
     box-shadow: none;
-    border: var(--border-box);
+}
+/* End of main navigation */
+
+/* The parent container */
+.nav-directory {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* The hidden dropdown */
+.sub-nav {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background);
+    border: var(--border-box); 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 180px; 
+    z-index: 50; 
+}
+
+.sub-nav li {
+    border-bottom: var(--border-box);
+}
+
+.sub-nav li:last-child {
+    border-bottom: none;
+}
+
+.sub-nav a {
+    display: block;
+    margin: 0; 
+    padding: .75rem 1rem; 
+    border: none;
+    text-decoration: none;
+    color: var(--subtitle-color);
+}
+
+.sub-nav a:hover {
+    border: none;
+    background-color: var(--box-line-color);
+    color: var(--text-color);
+}
+
+.sub-nav.show {
+    display: block;
+}
+
+/* The toggle button */
+.nav-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: -0.5rem; 
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.1s linear; 
+}
+
+.nav-toggle img {
+    transition: transform 0.15s linear, opacity 0.15s linear; 
+}
+
+.nav-toggle:hover {
+    transform: translateY(1px); 
+}
+
+.nav-toggle.open img {
+    transform: rotate(180deg);
+    opacity: 0.6; 
 }
 /* End of navigation */
 
@@ -73,11 +153,10 @@
     display: flex;
     position: absolute; 
     top: 100%; 
-    left: 0;
+    left: -.5rem;
     width: 100%;
     flex-direction: column;
     background: var(--background);
-    border-bottom: 1px solid var(--box-line-color);
 }
 
 .navigation.mobile-menu ul {
@@ -93,7 +172,7 @@
 
 .navigation.mobile-menu ul li a {
     display: block;
-    padding: 1rem;
+    padding: .5rem;
     width: 100%;
     font-size: 1.125rem;
 }
@@ -199,6 +278,24 @@
 
     .logo {
         width: 40px;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .sub-nav {
+        position: relative; 
+        display: block !important;
+        width: 100%;
+        border: none;
+    }
+
+    .sub-nav a {
+        font-size: 1rem; 
+        padding: .5rem 1rem !important; 
+        color: var(--subtitle-color);
+        border-left: var(--border-box);
     }
 
     .hamburger {

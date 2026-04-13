@@ -49,11 +49,22 @@
         </button>
         <nav class="navigation" id="navigation">
             <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#featured-projects">PROJECTS</a></li>
-                <li><a href="#education">EDUCATION</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li class="nav-directory">
+                    <a href="/" class="nav-link">HOME</a>
+                    <button class="nav-toggle" id="home-toggle">
+                        <img src="./assets/svg/dropdown-arrow.svg" width="15" alt="">
+                    </button>
+                    
+                    <ul class="sub-nav" id="home-subnav">
+                        <li><a href="/#about">ABOUT</a></li>
+                        <li><a href="/#featured-projects">FEATURED</a></li>
+                        <li><a href="/#education">EDUCATION</a></li>
+                        <li><a href="/#contact">CONTACT</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="/pages/projects/" class="nav-link">PROJECTS</a></li>
+                <li><a href="/pages/resume/" class="nav-link">RESUME</a></li>
             </ul>
         </nav>
     </header>
