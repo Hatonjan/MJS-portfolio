@@ -370,7 +370,7 @@
 
 @media (max-width: 480px) {
     .container  {
-        margin: 3rem 5vw;
+        padding: 3rem 5vw;
     }
     
     /* Hero section */
