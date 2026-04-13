@@ -5,7 +5,7 @@
     width: 90vw;
     border: var(--border-box);
     max-width: 900px;
-    margin: 4rem auto;
+    margin: 10rem auto 4rem;
 }
 
 .resume-line {
