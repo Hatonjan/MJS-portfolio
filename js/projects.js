@@ -134,7 +134,7 @@ function renderProject(index) {
                     <a href="${project.liveUrl}" target="_blank" class="btn-live">LIVE VIEW</a>
                 ` : ` 
                     <a href="${project.liveUrl}" target="_blank" class="btn-live desktop-only">LIVE VIEW</a>
-                    <p class="keyboard-warning">KEYBOARD REQUIRED</p>
+                    $<p class="keyboard-warning">DESKTOP ONLY</p>
                 `}
             </div>
         </div>
