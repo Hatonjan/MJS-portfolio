@@ -25,7 +25,7 @@
     margin-left: 5rem;
 }
 
-/* 1. THE DIRECT CHILD FIX */
+
 /* Only targets the main top-level UL, protecting the dropdown */
 .navigation > ul {
     list-style-type: none;

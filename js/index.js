@@ -73,7 +73,7 @@ async function loadCertifications() {
 
         const html = data.certs.map(cert => `
             <li>
-                <a href="${cert.url}">
+                <a href="${cert.url}" target="_blank">
                     <img src="${cert.icon}" alt="${cert.altText}">
                     <p>${cert.authority}</p>
                     <p>${cert.title}</p>
