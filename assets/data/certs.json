@@ -39,6 +39,17 @@
         "altText": "Meta 'M' icon",
         "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/EJFKRO8Y293G",
         "recognizedForCredit": false
+        },
+        {
+        "id": 4,
+        "authority": "IMB",
+        "platform": "Coursera",
+        "title": "AI Engineering",
+        "icon": "./assets/svg/ibm.svg",
+        "altText": "IBM icon",
+        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/B89SXDSV0M28",
+        "recognizedForCredit": true
         }
     ]
 }
+
