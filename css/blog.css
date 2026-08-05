@@ -109,4 +109,8 @@ pre code {
     .sudoku-solver {
         max-width: 85vw;
     }
+
+    .sudoku-solver h2{
+        font-size: 1.875;
+    }
 }
