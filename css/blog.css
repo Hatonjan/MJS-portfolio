@@ -66,6 +66,10 @@ pre code {
     margin-bottom: 2rem;
 }
 
+.sudoku-solver a {
+    color: rgb(117, 100, 6);
+}
+
 .sudoku-solver img {
     max-width: 100%; 
     height: auto; 
