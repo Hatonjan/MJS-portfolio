@@ -1,4 +1,4 @@
-# How I Saved 10 Million CPU Operations on a Single Sudoku Puzzle using Set Theory and Python 
+# How I Saved 10 Million CPU Operations on a Single Sudoku Puzzle Using Set Theory and Python 
 
 **By Jonathan Scott** • *August 2026* • *8 min read*
 
