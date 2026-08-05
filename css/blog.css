@@ -82,8 +82,31 @@ pre code {
 }
 /* End of blog */
 
-@media (max-width: 768px)  {
-    body {
-        max-width: 80vw;
+@media (max-width: 768px) {
+    /* Table formatting */
+    table { 
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap; 
+        -webkit-overflow-scrolling: touch; /* smooth momentum scrolling on iOS */
+    }
+
+    th, td { 
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    /* End of table */
+
+    /* Code block formatting */
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    /* Blog formatting */
+    .sudoku-solver {
+        max-width: 85vw;
     }
 }
