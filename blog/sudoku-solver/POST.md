@@ -6,7 +6,7 @@
 ![Sudoku board with a pen on top of it](./img/sudoku.jpg)
 Image from https://pixabay.com by JeromeWare 
 
-## The possibility of the impossible
+## The Possibility of the Impossible
 
 While learning algorithms and data structures, I came across what the professor called the Sudoku Problem. The premise was straightforward: write an algorithm to solve any Sudoku puzzle. The classic brute-force approach simply looks for all blank spaces and enumerates every possible candidate. For an $n×n$ Sudoku puzzle, this creates a worst-case time complexity of $O(n^m)$, where $n$ is the number of possible digits, and $m$ represents the number of empty squares. The professor then challenged us to think of an algorithm with a worst-case time complexity better than that exponential mathematical bound.
 
@@ -56,7 +56,7 @@ If every empty square on a board has a forced choice like this, the algorithm wa
 
 The moment logic runs out, and the algorithm is forced to guess between two numbers, the single linear timeline splits. We fall right back into the exponential nightmare of $O(n^m)$.
 
-## The transformers Epiphany: Global Awareness
+## The Transformers Epiphany: Global Awareness
 
 To solve the problem, I needed a way to keep the algorithm in that linear $O(3m)$ state for as long as possible before resorting to a guess.
 
@@ -120,7 +120,7 @@ def _is_valid(self, r, c, val):
 
 To measure the algorithmic efficiency independent of machine specs, CPU clock speeds, or background OS processes, I instrumented both solvers with a backtrack_count metric to track every single dead end the algorithms encountered.
 
-## The empirical results exceeded my expectations.
+## The Empirical Results Exceeded my Expectations.
 
 I started by benchmarking both algorithms on two $4×4$ Sudoku puzzles: a standard puzzle to test basic correctness, and an empty board, expecting the empty board to force a worst-case scenario.
 
