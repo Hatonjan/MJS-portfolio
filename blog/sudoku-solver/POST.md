@@ -168,8 +168,8 @@ The ultimate test came with Puzzle #10. The classic algorithm ran on my Intel i7
 
 - Hardware Cannot Outrun Bad Complexity: Throwing faster CPUs or bigger cloud instances at an exponential problem is a temporary band-aid. Algorithmic efficiency and mathematical insight are what actually scale.
 
-- Compounding Optimizations: Combining data-structure optimization $O(1)$ Hash Sets instead of $O(n)$ array loops with heuristic search pruning Minimum Remaining Values, creates a massive compounding effect. The algorithm makes fewer decisions, and every decision it makes is infinitely cheaper.
+- Compounding Optimizations: Combining data-structure optimization $O(1)$ Hash Sets instead of $O(n)$ array loops with heuristic search pruning Minimum Remaining Values creates a massive compounding effect. The algorithm makes fewer decisions, and every decision it makes is infinitely cheaper.
 
-- Pragmatic NP-Completeness: In the end, I didn't change the theoretical worst-case upper bound of $O(n^m)$; general Sudoku remains NP-Complete. But by understanding the mathematical constraints of the problem, My optimized solver bypassed *98.99%* of the computational nightmare in real-world execution.
+- Pragmatic NP-Completeness: In the end, I didn't change the theoretical worst-case upper bound of $O(n^m)$; general Sudoku remains NP-Complete. But by understanding the mathematical constraints of the problem, my optimized solver bypassed *98.99%* of the computational nightmare in real-world execution.
 
 - AI is a Collaborator, Not an Oracle: Generative AI is an incredible problem-solving accelerator, but using it without a deep understanding of the problem space can be counterproductive. If I had simply accepted the LLM's initial warning that beating exponential time complexity was impossible, this project would have ended on paper. Human domain intuition is what bridges the gap between theoretical bounds and practical optimization. 
