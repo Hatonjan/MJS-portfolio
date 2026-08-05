@@ -1,0 +1,85 @@
+
+body {
+margin: 0;
+font-family: "Montserrat";
+background-color: var(--background);
+}
+
+/* Table formatting */
+pre { 
+    padding: 1rem; 
+    border-radius: 6px; 
+    overflow-x: auto; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 1.5rem 0; 
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    border: 1px solid var(--subtitle-color); 
+    padding: 8px 12px; 
+    text-align: left; }
+/* End of table */
+
+/* Code block formatting */
+pre {
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+pre code {
+    font-family: 'Cascadia Code', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* End of code block */
+
+/* Blog formatting */
+.sudoku-solver {
+    max-width: 60vw;
+    margin: 0 auto;
+    padding-top: 6rem; /* Clean spacing below navbar */
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.sudoku-solver h1 {
+    font-size: 2.18rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.sudoku-solver h2 {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.sudoku-solver p,
+.sudoku-solver li {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.sudoku-solver img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 6px;
+}
+
+.blog-footer {
+    border-top: var(--border-box);
+    margin-top: 10rem;
+}
+/* End of blog */
+
+@media (max-width: 768px)  {
+    body {
+        max-width: 80vw;
+    }
+}

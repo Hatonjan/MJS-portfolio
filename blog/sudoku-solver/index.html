@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How I Saved 10 Million CPU Operations on Sudoku</title>
+        
+        <!-- CSS Stylesheets -->    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"> <!-- Include Highlight.js Dark Theme CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+        <link rel="stylesheet" href="../../css/globals.css">
+        <link rel="stylesheet" href="../../css/components.css">
+        <link rel="stylesheet" href="../../css/blog.css">
+
+        <!-- Libraries for Markdown, Code Highlighting, and LaTeX -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script> <!-- Include Highlight.js Library -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    
+    <body>
+        <header class="navbar">
+            <a style="box-shadow: none;" href="/">
+                <img
+                    class="logo"
+                    src="../../assets/svg/mjs.svg" 
+                    alt="Personal logo (The letter MJS ordered inside an hexagon)"
+                >
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <img src="../../assets/svg/hamburger-menu-white.svg" alt="Menu icon">
+            </button>
+            <nav class="navigation" id="navigation">
+                <ul>
+                    <li class="nav-directory">
+                        <a href="/" class="nav-link">HOME</a>
+                        <button class="nav-toggle" id="home-toggle">
+                            <img src="../../assets/svg/dropdown-arrow.svg" width="15" alt="">
+                        </button>
+                        
+                        <ul class="sub-nav" id="home-subnav">
+                            <li><a href="/#about">ABOUT</a></li>
+                            <li><a href="/#featured-projects">FEATURED</a></li>
+                            <li><a href="/#education">EDUCATION</a></li>
+                            <li><a href="/#contact">CONTACT</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../pages/projects/" class="nav-link">PROJECTS</a></li>
+                    <li><a href="../../pages/resume/" class="nav-link">RESUME</a></li>
+                    <li><a href="../../blog/sudoku-solver/" class="nav-link">BLOG</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article id="content" class="sudoku-solver">Loading article...</article>
+        </main>
+        
+        <footer class="blog-footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="../../assets/svg/footer-logo.svg" alt="Personal logo (The letter MJS ordered inside an hexagon)">
+                </div>
+
+                <ul class="footer-navigation">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            
+                <ul class="footer-links">
+                    <li><a href="https://github.com/Hatonjan"><img src="../../assets/svg/github-line.svg" alt="Github logo"></a></li>
+                    <li><a href="https://linkedin.com/in/jonathan-sc0tt"><img src="../../assets/svg/linkedin-line.svg" alt="LinkedIn logo"></a></li>
+                    <li><a href="mailto:jonathan@mjscott.dev"><img src="../../assets/svg/gmail-line.svg" alt="Gmail logo"></a></li>
+                </ul>
+            </div>
+
+            <p class="copyright">&copy; <span id="year"></span> Jonathan Scott. All rights reserved</p>
+        </footer>
+
+        <script src="../../js/index.js"></script>
+        <script src="../../js/blog.js"></script>
+        <script src="../../js/hamburger.js"></script>
+    </body>
+</html>
