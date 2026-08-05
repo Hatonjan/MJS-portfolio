@@ -120,7 +120,7 @@ def _is_valid(self, r, c, val):
 
 To measure the algorithmic efficiency independent of machine specs, CPU clock speeds, or background OS processes, I instrumented both solvers with a backtrack_count metric to track every single dead end the algorithms encountered.
 
-## The Empirical Results Exceeded my Expectations.
+## The Empirical Results Exceeded My Expectations.
 
 I started by benchmarking both algorithms on two $4×4$ Sudoku puzzles: a standard puzzle to test basic correctness, and an empty board, expecting the empty board to force a worst-case scenario.
 
