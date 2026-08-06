@@ -1,4 +1,4 @@
-# How I Saved 10 Million CPU Operations on a Single Sudoku Puzzle Using Set Theory and Python 
+# How I Reduced Sudoku Backtracking by 98.99% Using Set Theory and Python  
 
 **By Jonathan Scott** • *August 2026* • *8 min read*
 
@@ -52,13 +52,13 @@ Now, this turns an exponential search into instant logical deduction. If square 
 By taking the union of these sets, we find that the values *{1, 3, 4}* are already claimed. Through pure set elimination, *a* must be *2*. No guessing, no branching, no CPU cycles wasted.
 
 Applying this same elimination logic to square *d* cross-references sets 1, 5, and 7, instantly revealing that *d = 3*.
-If every empty square on a board has a forced choice like this, the algorithm walks straight to the finish line in linear $O(3m)$ time. But here is where I hit the mathematical wall: what happens when a square has more than one valid option left?
+If every empty square on a board has a forced choice like this, the algorithm walks straight to the finish line in linear $O(m)$ time. But here is where I hit the mathematical wall: what happens when a square has more than one valid option left?
 
 The moment logic runs out, and the algorithm is forced to guess between two numbers, the single linear timeline splits. We fall right back into the exponential nightmare of $O(n^m)$.
 
 ## The Transformers Epiphany: Global Awareness
 
-To solve the problem, I needed a way to keep the algorithm in that linear $O(3m)$ state for as long as possible before resorting to a guess.
+To solve the problem, I needed a way to keep the algorithm in that linear $O(m)$ state for as long as possible before resorting to a guess.
 
 That was when I thought about how Transformer architectures process information in modern machine learning. Instead of reading tokens sequentially one-by-one, transformers pay attention to the entire context globally before generating an output.
 
@@ -66,13 +66,15 @@ Standard Sudoku solvers are "locally blind"; they blindly process row 1 column 1
 
 What if, instead of moving sequentially, the algorithm mapped the entire board state first on every iteration? By scanning all m empty spaces to find the square with the fewest remaining legal options (the Minimum Remaining Values heuristic), we could attack the tightest constraints first and collapse the decision tree before it ever has a chance to branch out.
 
-Paying a small polynomial "tax" of $O(m^2 + 3m)$ to map the board upfront could potentially save us from exploring millions of dead ends later. Now, it was time to put this hypothesis to the test in Python.
+(As I'd later learn, this is a well-established technique in constraint satisfaction known as the Minimum Remaining Values, or MRV, heuristic. I hadn't studied CSPs formally at that point, so arriving at it through the Transformers analogy felt like a genuine "aha", even though, as my AI collaborator pointed out, I was walking a well-trodden path in AI research.)
+
+Paying a small polynomial "tax" of $O(m^2)$ to map the board upfront could potentially save us from exploring millions of dead ends later. Now, it was time to put this hypothesis to the test in Python.
 
 ## Translating Theory into Python (With an AI Peer)
 
 With my set logic mapped out, I wanted to turn this hypothesis into a Python script. So I decided to use an AI collaborator not only to implement the logic, but to challenge my assumptions before a single line of code was executed.
 
-I opened a Gemini 3.1 Pro terminal, laid out my set theory, and asked the model to stress-test my reasoning. When I first proposed that subset mapping could reduce the overall execution time toward a polynomial bound of $O(m^2 + 3m)$, the model immediately pushed back, reminding me that Sudoku is NP-Complete, and that an adversarial board would still force an exponential branching tree of $O(n^m)$.
+I opened a Gemini 3.1 Pro terminal, laid out my set theory, and asked the model to stress-test my reasoning. When I first proposed that subset mapping could reduce the overall execution time toward a polynomial bound of $O(m^2)$, the model immediately pushed back, reminding me that Sudoku is NP-Complete, and that an adversarial board would still force an exponential branching tree of $O(n^m)$.
 
 Instead of abandoning the idea, I engaged in a dialogue with the model. Utilizing the Maieutics Socratic method, I guided the AI through my exact thought process: we weren't trying to magically break NP-Completeness, but rather test how much of the exponential search space we could eliminate in practice.
 
@@ -168,7 +170,7 @@ The ultimate test came with Puzzle #10. The classic algorithm ran on my Intel i7
 
 - Hardware Cannot Outrun Bad Complexity: Throwing faster CPUs or bigger cloud instances at an exponential problem is a temporary band-aid. Algorithmic efficiency and mathematical insight are what actually scale.
 
-- Compounding Optimizations: Combining data-structure optimization $O(1)$ Hash Sets instead of $O(n)$ array loops with heuristic search pruning Minimum Remaining Values creates a massive compounding effect. The algorithm makes fewer decisions, and every decision it makes is infinitely cheaper.
+- Compounding Optimizations: Combining data-structure optimization $O(1)$ Hash Sets instead of $O(n)$ array loops with heuristic search pruning Minimum Remaining Values creates a massive compounding effect. The algorithm makes fewer decisions, and every decision it makes is infinitely cheaper (a combination well known in CSP solving, but one I arrived at independently).
 
 - Pragmatic NP-Completeness: In the end, I didn't change the theoretical worst-case upper bound of $O(n^m)$; general Sudoku remains NP-Complete. But by understanding the mathematical constraints of the problem, my optimized solver bypassed *98.99%* of the computational nightmare in real-world execution.
 
