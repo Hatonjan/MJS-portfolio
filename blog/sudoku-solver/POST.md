@@ -76,9 +76,9 @@ With my set logic mapped out, I wanted to turn this hypothesis into a Python scr
 
 I opened a Gemini 3.1 Pro terminal, laid out my set theory, and asked the model to stress-test my reasoning. When I first proposed that subset mapping could reduce the overall execution time toward a polynomial bound of $O(m^2)$, the model immediately pushed back, reminding me that Sudoku is NP-Complete, and that an adversarial board would still force an exponential branching tree of $O(n^m)$.
 
-Instead of abandoning the idea, I engaged in a dialogue with the model. Utilizing the Maieutics Socratic method, I guided the AI through my exact thought process: we weren't trying to magically break NP-Completeness, but rather test how much of the exponential search space we could eliminate in practice.
+Instead of abandoning the idea, I walked the model through my reasoning: my point wasn't that we could magically break NP-Completeness, but that we could test how much of the exponential search space we could eliminate in practice.
 
-Once our theoretical framework was aligned, I prompted the model to generate the implementation: 
+Once the theoretical framework was aligned, I prompted the model to generate the implementation: 
 
 - The Optimized MRV Solver: Implementing my subset logic, hash sets, and global board mapping.
 
