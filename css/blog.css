@@ -80,6 +80,19 @@ pre code {
     border-top: var(--border-box);
     margin-top: 10rem;
 }
+
+.sudoku-repo img {
+    margin: 5rem 20vw 0;
+    height: 50px;
+}
+
+.sudoku-repo img:hover {
+    height: 52px;
+}
+
+.sudoku-repo:hover {
+    box-shadow: none;
+}
 /* End of blog */
 
 @media (max-width: 768px) {
