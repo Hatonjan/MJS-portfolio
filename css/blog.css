@@ -81,7 +81,7 @@ pre code {
     margin-top: 10rem;
 }
 
-.repo-callout{
+.repo-container{
     margin: 5rem 20vw 0;
 }
 
@@ -139,5 +139,9 @@ pre code {
 
     .sudoku-solver h2{
         font-size: 1.875;
+    }
+
+    .repo-container{
+        margin: 3rem 7.5vw 0;
     }
 }
