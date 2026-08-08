@@ -81,9 +81,23 @@ pre code {
     margin-top: 10rem;
 }
 
-.sudoku-repo img {
+.repo-callout{
     margin: 5rem 20vw 0;
+}
+
+.sudoku-repo {
+    text-decoration: none;
+}
+
+.sudoku-repo img {
     height: 50px;
+    padding-top: 1rem;
+}
+
+.sudoku-repo span {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .sudoku-repo img:hover {

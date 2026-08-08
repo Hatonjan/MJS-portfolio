@@ -3,8 +3,8 @@
 **By Jonathan Scott** • *August 2026* • *8 min read*
 
 ---
-![Sudoku board with a pen on top of it](./img/sudoku.jpg)
-Image from https://pixabay.com by JeromeWare 
+![A Sudoku board mixed with computer science visual elements](./img/sudoku.png)
+Image generated with Google Gemini 3.1 
 
 ## The Possibility of the Impossible
 
@@ -175,3 +175,5 @@ The ultimate test came with Puzzle #10. The classic algorithm ran on my Intel i7
 - Pragmatic NP-Completeness: In the end, I didn't change the theoretical worst-case upper bound of $O(n^m)$; general Sudoku remains NP-Complete. But by understanding the mathematical constraints of the problem, my optimized solver bypassed *98.99%* of the computational nightmare in real-world execution.
 
 - AI is a Collaborator, Not an Oracle: Generative AI is an incredible problem-solving accelerator, but using it without a deep understanding of the problem space can be counterproductive. If I had simply accepted the LLM's initial warning that beating exponential time complexity was impossible, this project would have ended on paper. Human domain intuition is what bridges the gap between theoretical bounds and practical optimization. 
+
+---
