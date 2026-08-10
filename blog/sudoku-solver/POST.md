@@ -30,9 +30,9 @@ Mathematically, this means square $a$ isn't floating in isolation; it lives stri
 
 |                              |
 |------------------------------|
-|*Row Set 1 : {a, b, c, d}*    |
-|*Column Set 3 : {a, e, i, m}* |
-|*Box Set 2 : {a, b, e, f}*    |
+|*Row (Set 1) : {a, b, c, d}*    |
+|*Box (Set 2) : {a, b, e, f}*    |
+|*Column (Set 3) : {a, e, i, m}* |
 
 By mapping every square on the $4×4$ board to its corresponding row, column, and sub-grid, I generated 12 fundamental constraint sets.
 
@@ -51,7 +51,7 @@ Now, this turns an exponential search into instant logical deduction. If square 
 
 By taking the union of these sets, we find that the values *{1, 3, 4}* are already claimed. Through pure set elimination, *a* must be *2*. No guessing, no branching, no CPU cycles wasted.
 
-Applying this same elimination logic to square *d* cross-references sets 1, 5, and 7, instantly revealing that *d = 3*.
+Applying this same elimination logic to square $d$ cross-references sets 1, 5, and 7, instantly revealing that $d = 3$.
 If every empty square on a board has a forced choice like this, the algorithm walks straight to the finish line in linear $O(m)$ time. But here is where I hit the mathematical wall: what happens when a square has more than one valid option left?
 
 The moment logic runs out, and the algorithm is forced to guess between two numbers, the single linear timeline splits. We fall right back into the exponential nightmare of $O(n^m)$.
@@ -64,7 +64,7 @@ That was when I thought about how Transformer architectures process information 
 
 Standard Sudoku solvers are "locally blind"; they blindly process row 1 column 1, then row 1 column 2, regardless of how many empty spaces are in the way.
 
-What if, instead of moving sequentially, the algorithm mapped the entire board state first on every iteration? By scanning all m empty spaces to find the square with the fewest remaining legal options (the Minimum Remaining Values heuristic), we could attack the tightest constraints first and collapse the decision tree before it ever has a chance to branch out.
+What if, instead of moving sequentially, the algorithm mapped the entire board state first on every iteration? By scanning all $m$ empty spaces to find the square with the fewest remaining legal options (the Minimum Remaining Values heuristic), we could attack the tightest constraints first and collapse the decision tree before it ever has a chance to branch out.
 
 (As I'd later learn, this is a well-established technique in constraint satisfaction known as the Minimum Remaining Values, or MRV, heuristic. I hadn't studied CSPs formally at that point, so arriving at it through the Transformers analogy felt like a genuine "aha", even though, as my AI collaborator pointed out, I was walking a well-trodden path in AI research.)
 
