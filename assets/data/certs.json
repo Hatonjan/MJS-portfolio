@@ -49,6 +49,16 @@
         "altText": "IBM icon",
         "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/B89SXDSV0M28",
         "recognizedForCredit": true
+        },
+        {
+        "id": 5,
+        "authority": "IMB",
+        "platform": "Coursera",
+        "title": "Data Analyst",
+        "icon": "./assets/svg/ibm.svg",
+        "altText": "IBM icon",
+        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/79P5RPV9KLP6",
+        "recognizedForCredit": true
         }
     ]
 }
